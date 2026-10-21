@@ -1,0 +1,1173 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background: #ffffff;
+}
+
+/* =========================
+   HEADER & HERO
+========================= */
+header {
+  min-height: 100vh;
+  color: white;
+  background:
+    linear-gradient(rgba(8, 24, 45, 0.78), rgba(8, 24, 45, 0.65)),
+    url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1") center /
+      cover no-repeat;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+.navbar {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffb347;
+}
+
+.menu-toggle {
+  display: none;
+  padding: 4px 8px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 150px 24px 120px;
+  text-align: center;
+}
+
+.hero h2 {
+  margin-bottom: 22px;
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 32px;
+  font-size: 19px;
+  color: #f1f5f9;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 6px;
+  background: #f59e0b;
+  color: #172033;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #ffbd4a;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+.about {
+  padding: 85px 20px;
+  text-align: center;
+}
+
+.about h2,
+.courses h2 {
+  margin-bottom: 24px;
+  color: #123052;
+  font-size: 38px;
+}
+
+.about p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #5b6472;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* =========================
+   COURSES SECTION
+========================= */
+.courses {
+  padding: 85px 20px;
+  background: #f3f6fa;
+  text-align: center;
+}
+
+.courses h2 {
+  margin-bottom: 40px;
+}
+
+.courses-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.course-box {
+  width: 300px;
+  padding: 32px 24px;
+  border: 1px solid #e5eaf0;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(15, 35, 60, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.course-box:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 30px rgba(15, 35, 60, 0.14);
+}
+
+.course-box h3 {
+  margin-bottom: 14px;
+  color: #d97706;
+  font-size: 23px;
+}
+
+.course-box p {
+  color: #5b6472;
+  line-height: 1.8;
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    margin-top: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(10, 30, 50, 0.98);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 13px;
+  }
+
+  .hero {
+    padding: 110px 22px 90px;
+  }
+
+  .hero h2 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .about,
+  .courses {
+    padding: 65px 20px;
+  }
+
+  .about h2,
+  .courses h2 {
+    font-size: 31px;
+  }
+
+  .course-box {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+  color: #123052;
+  font-size: 38px;
+}
+
+.contact p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  color: #5b6472;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 6px;
+  background: #16a34a;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #15803d;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  padding: 25px 20px;
+  background: #0b1f35;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 14px;
+}
+
+/* =========================
+   CONTACT MOBILE STYLES
+========================= */
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 20px;
+  }
+
+  .contact h2 {
+    font-size: 31px;
+  }
+
+  .contact p {
+    font-size: 16px;
+  }
+}
+
+/* FOOTER BRANDING */
+.footer h3 {
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.footer p {
+  margin-bottom: 8px;
+}
+
+.footer .copyright {
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+/* =========================
+   SCHOOL STATISTICS
+========================= */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 55px 7%;
+  background: #123052;
+  text-align: center;
+}
+
+.stat-box {
+  padding: 20px 10px;
+}
+
+.stat-box h3 {
+  margin-bottom: 8px;
+  color: #ffb347;
+  font-size: 36px;
+}
+
+.stat-box p {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 35px 20px;
+  }
+
+  .stat-box h3 {
+    font-size: 29px;
+  }
+
+  .stat-box p {
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   ADMISSIONS SECTION
+========================= */
+.admissions {
+  padding: 85px 20px;
+  background: linear-gradient(135deg, #123052, #1e4974);
+  color: white;
+  text-align: center;
+}
+
+.admissions-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.admissions-label {
+  margin-bottom: 15px;
+  color: #ffb347;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.admissions h2 {
+  margin-bottom: 22px;
+  font-size: 38px;
+  line-height: 1.3;
+}
+
+.admissions-content > p:not(.admissions-label) {
+  margin-bottom: 30px;
+  color: #e2e8f0;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.admissions-btn {
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: 6px;
+  background: #ffb347;
+  color: #123052;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.admissions-btn:hover {
+  background: #ffd08a;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .admissions {
+    padding: 65px 22px;
+  }
+
+  .admissions h2 {
+    font-size: 30px;
+  }
+
+  .admissions-content > p:not(.admissions-label) {
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
+#topBtn {
+  display: none;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #f59e0b;
+  color: #123052;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+#topBtn:hover {
+  background: #ffbd4a;
+  transform: translateY(-4px);
+}
+
+/* PREMIUM COURSE CARDS */
+.courses-intro {
+  max-width: 650px;
+  margin: -10px auto 35px;
+  color: #5b6472;
+  font-size: 17px;
+}
+
+.course-box {
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+  border: 1px solid #e5eaf0;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(15, 35, 60, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.course-box img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.course-box:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 32px rgba(15, 35, 60, 0.15);
+}
+
+.course-box:hover img {
+  transform: scale(1.04);
+}
+
+.course-content {
+  padding: 24px;
+}
+
+.course-content h3 {
+  margin-bottom: 10px;
+  color: #123052;
+  font-size: 22px;
+}
+
+.course-content p {
+  color: #5b6472;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .courses-intro {
+    font-size: 16px;
+  }
+
+  .course-box img {
+    height: 210px;
+  }
+}
+
+/* ===== BRIGHT FUTURE SCHOOL: ADMISSIONS ===== */
+
+section.admissions {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 90px 20px !important;
+  text-align: center !important;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #0b2038 0%, #164e78 100%) !important;
+  box-sizing: border-box;
+}
+
+section.admissions h2 {
+  max-width: 750px;
+  margin: 0 auto 20px !important;
+  color: #ffffff !important;
+  font-size: clamp(30px, 4vw, 46px) !important;
+  line-height: 1.25;
+}
+
+section.admissions p {
+  max-width: 650px;
+  margin: 0 auto 30px !important;
+  color: #e3edf7 !important;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+section.admissions .section-label {
+  margin-bottom: 14px !important;
+  color: #ffbd59 !important;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+section.admissions a.admissions-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #ffbd59;
+  border-radius: 8px;
+  background: #ffbd59;
+  color: #102b46 !important;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+section.admissions a.admissions-btn:hover {
+  transform: translateY(-3px);
+  background: transparent;
+  color: #ffffff !important;
+}
+
+@media (max-width: 600px) {
+  section.admissions {
+    padding: 65px 20px !important;
+  }
+
+  section.admissions p {
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   PREMIUM CONTACT SECTION
+========================= */
+
+section.contact {
+  padding: 85px 20px !important;
+  text-align: center !important;
+  background: #f3f6fa !important;
+  color: #18324d !important;
+}
+
+section.contact h2 {
+  margin: 0 auto 18px !important;
+  color: #123052 !important;
+  font-size: clamp(30px, 4vw, 42px) !important;
+}
+
+section.contact p {
+  max-width: 620px;
+  margin: 0 auto 28px !important;
+  color: #596779 !important;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+section.contact a.contact-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #168653;
+  border-radius: 8px;
+  background: #168653;
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(22, 134, 83, 0.18);
+  transition: all 0.3s ease;
+}
+
+section.contact a.contact-btn:hover {
+  transform: translateY(-3px);
+  background: #116b42;
+  border-color: #116b42;
+  box-shadow: 0 12px 24px rgba(22, 134, 83, 0.25);
+}
+
+@media (max-width: 600px) {
+  section.contact {
+    padding: 60px 18px !important;
+  }
+
+  section.contact p {
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   PREMIUM SCHOOL FOOTER
+========================= */
+
+footer.footer {
+  padding: 45px 20px 20px;
+  background: #0b2038;
+  color: #ffffff;
+  text-align: center;
+}
+
+footer.footer h3 {
+  margin-bottom: 12px;
+  color: #ffbd59;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+footer.footer p {
+  max-width: 550px;
+  margin: 0 auto 18px;
+  color: #d5dfeb;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+footer.footer .copyright {
+  margin-top: 25px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: #aebed0;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  footer.footer {
+    padding: 35px 18px 18px;
+  }
+
+  footer.footer h3 {
+    font-size: 22px;
+  }
+}
+
+/* =========================
+   BRIGHT FUTURE SCHOOL GALLERY
+========================= */
+
+section.gallery {
+  padding: 85px 7%;
+  text-align: center;
+  background: #ffffff;
+}
+
+section.gallery .section-label {
+  margin-bottom: 12px;
+  color: #e89b2c;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+section.gallery h2 {
+  margin-bottom: 18px;
+  color: #123052;
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.gallery-intro {
+  max-width: 650px;
+  margin: 0 auto 40px;
+  color: #5b6472;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  min-height: 250px;
+  border-radius: 14px;
+  background: #e8edf2;
+  box-shadow: 0 8px 24px rgba(15, 35, 60, 0.1);
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.07);
+}
+
+.gallery-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 22px 15px 18px;
+  background: linear-gradient(transparent, rgba(8, 24, 45, 0.9));
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: left;
+}
+
+@media (max-width: 850px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  section.gallery {
+    padding: 60px 20px;
+  }
+
+  .gallery-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gallery-item img {
+    height: 250px;
+  }
+}
+
+/* =========================
+   SCHOOL ANNOUNCEMENT BANNER
+========================= */
+
+.announcement-banner {
+  position: relative;
+  z-index: 1001;
+  padding: 13px 20px;
+  background: #ffbd59;
+  color: #102b46;
+  text-align: center;
+}
+
+.announcement-banner p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.announcement-label {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 4px 9px;
+  border-radius: 4px;
+  background: #102b46;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  vertical-align: middle;
+}
+
+.announcement-banner a {
+  display: inline-block;
+  margin-left: 8px;
+  color: #102b46;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.announcement-banner a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .announcement-banner {
+    padding: 12px 14px;
+  }
+
+  .announcement-banner p {
+    font-size: 13px;
+  }
+
+  .announcement-label {
+    margin-right: 5px;
+  }
+
+  .announcement-banner a {
+    margin-left: 4px;
+  }
+}
+
+/* =========================
+   FLOATING WHATSAPP BUTTON
+========================= */
+
+.floating-whatsapp {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  background: #20b86a;
+  color: #ffffff !important;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.floating-whatsapp span:first-child {
+  font-size: 23px;
+  line-height: 1;
+}
+
+.floating-whatsapp:hover {
+  transform: translateY(-4px);
+  background: #128c50;
+}
+
+@media (max-width: 600px) {
+  .floating-whatsapp {
+    right: 14px;
+    bottom: 14px;
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   SCROLL REVEAL ANIMATIONS
+========================= */
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect visitors who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* =========================
+   KEYBOARD ACCESSIBILITY
+========================= */
+
+/* Make focused links and buttons easy to see */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #f4a623;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Make keyboard focus stand out on the navigation */
+.nav-links a:focus-visible {
+  background: rgba(255, 189, 89, 0.18);
+  color: #ffbd59;
+}
+
+/* Keep focus visible on the floating WhatsApp button */
+.floating-whatsapp:focus-visible {
+  outline: 3px solid #102b46;
+  outline-offset: 4px;
+}
+
+/* FIX: PREVENT FLOATING BUTTONS FROM OVERLAPPING */
+
+#topBtn {
+  right: 28px;
+  bottom: 100px;
+  z-index: 9998;
+}
+
+.floating-whatsapp {
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+}
+
+@media (max-width: 600px) {
+  #topBtn {
+    right: 16px;
+    bottom: 85px;
+  }
+
+  .floating-whatsapp {
+    right: 14px;
+    bottom: 14px;
+  }
+}
+
+/* =========================
+   DARK MODE TOGGLE BUTTON
+========================= */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-left: 15px;
+  padding: 10px 15px;
+  border: 2px solid #ffbd59;
+  border-radius: 30px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: #ffbd59;
+  color: #102b46;
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid #ffbd59;
+  outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    margin: 15px 0 0;
+  }
+}
+
+/* =========================
+   BRIGHT FUTURE SCHOOL DARK MODE
+========================= */
+
+body {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #101827;
+  color: #edf2f7;
+}
+
+/* Main sections */
+body.dark-mode .about,
+body.dark-mode .courses,
+body.dark-mode .gallery,
+body.dark-mode .contact {
+  background: #101827 !important;
+  color: #edf2f7 !important;
+}
+
+/* Section headings */
+body.dark-mode .about h2,
+body.dark-mode .courses h2,
+body.dark-mode .gallery h2,
+body.dark-mode .contact h2 {
+  color: #f1f5f9 !important;
+}
+
+/* Paragraphs */
+body.dark-mode .about p,
+body.dark-mode .courses-intro,
+body.dark-mode .gallery-intro,
+body.dark-mode .contact p,
+body.dark-mode .course-content p {
+  color: #cbd5e1 !important;
+}
+
+/* Cards */
+body.dark-mode .info-card,
+body.dark-mode .course-box,
+body.dark-mode .stat-box {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+  color: #edf2f7 !important;
+}
+
+/* Card headings */
+body.dark-mode .info-card h3,
+body.dark-mode .course-content h3,
+body.dark-mode .stat-box h3 {
+  color: #ffbd59 !important;
+}
+
+/* Statistics */
+body.dark-mode .stats {
+  background: #172235 !important;
+}
+
+/* Admissions */
+body.dark-mode .admissions {
+  background: linear-gradient(135deg, #081321, #163957) !important;
+  color: #ffffff !important;
+}
+
+/* Footer */
+body.dark-mode .footer {
+  background: #070d17 !important;
+  color: #edf2f7 !important;
+}
+
+/* Announcement banner */
+body.dark-mode .announcement-banner {
+  background: #d99a35 !important;
+  color: #101827 !important;
+}
+
+/* Navigation */
+body.dark-mode header {
+  background-color: #0b1422;
+}
+
+/* Theme button */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-left: 15px;
+  padding: 10px 15px;
+  border: 2px solid #ffbd59;
+  border-radius: 30px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: #ffbd59;
+  color: #102b46;
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid #ffbd59;
+  outline-offset: 4px;
+}
+
+body.dark-mode .theme-toggle {
+  color: #ffffff;
+  border-color: #ffbd59;
+}
+
+body.dark-mode .theme-toggle:hover {
+  background: #ffbd59;
+  color: #102b46;
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+  .theme-toggle {
+    margin: 15px 0 0;
+  }
+}
