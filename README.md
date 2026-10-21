@@ -6,7 +6,7 @@ A modern, responsive school website built with **HTML, CSS, and JavaScript**. Th
 
 **[Visit Bright Future School](YOUR-LIVE-WEBSITE-URL)**
 
-> Replace `YOUR-LIVE-WEBSITE-URL` with your actual GitHub Pages link.
+> Replace `YOUhttps://abdulrazaqismail333-debug.github.io/bright-future-school/R-LIVE-WEBSITE-URL` with your actual GitHub Pages link.
 
 ## ✨ Features
 
@@ -35,7 +35,7 @@ A modern, responsive school website built with **HTML, CSS, and JavaScript**. Th
 1. Clone this repository:
 
    ```bash
-   git clone YOUhttps://github.com/abdulrazaqismail333-debug/bright-future-school.gitR-GITHUB-REPOSITORY-URL
+   https://github.com/abdulrazaqismail333-debug/bright-future-school.git
    ```
 
 2. Open the downloaded project folder.
